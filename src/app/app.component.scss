@@ -1,0 +1,51 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(145deg, #f0f0ff, #fafbff);
+    color: #2d2d2d;
+  }
+  
+  .app-header {
+    background-color: #6f42c1;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(111, 66, 193, 0.2);
+  
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+  
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: background 0.3s ease;
+  
+        &:hover,
+        &.active-link {
+          background-color: #5a32a3;
+        }
+      }
+    }
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
