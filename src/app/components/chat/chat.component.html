@@ -1,0 +1,29 @@
+<div class="messages">
+    <div *ngFor="let msg of messages" class="message-wrapper" [ngClass]="msg.sender">
+      <div class="message-bubble">
+        <div class="meta">
+          <span class="sender">{{ msg.sender === 'you' ? 'You' : 'Celeste' }}</span>
+          <span class="timestamp">• just now</span>
+        </div>
+        <div class="message-text">{{ msg.text }}</div>
+      </div>
+    </div>
+  
+    <div *ngIf="isLoading" class="typing">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span>Celeste is thinking...</span>
+    </div>
+  </div>
+  
+  <form (submit)="sendMessage()" class="input-form">
+    <input
+      [(ngModel)]="userInput"
+      name="userInput"
+      placeholder="Send a message to Celeste..."
+      autocomplete="off"
+    />
+    <button type="submit">Send</button>
+  </form>
+  
